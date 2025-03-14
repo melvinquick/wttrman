@@ -4,11 +4,13 @@
 
 - Initial release
 
-## 1.x.x (Not Yet Released)
+## 1.2.1 (14 Mar 2025)
 
 ### Major Changes
 
 ### Minor Changes
+
+- [Update file structure to UV instead of BeeWare](https://codeberg.org/melvinquick/wttrman/issues/2)
 
 ### Patch Changes
 
