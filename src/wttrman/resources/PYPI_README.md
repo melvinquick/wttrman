@@ -1,7 +1,7 @@
 ## Donations
 
-- [Buy Me A Coffee](https://www.buymeacoffee.com/KingKairos)
-- [GitHub Sponsors](https://github.com/sponsors/melvinquick)
+[Buy Me A Coffee](https://www.buymeacoffee.com/KingKairos)  
+[GitHub Sponsors](https://github.com/sponsors/melvinquick)
 
 ## Purpose
 
@@ -14,5 +14,5 @@ Uninstall: `curl -s https://codeberg.org/melvinquick/wttrman/raw/branch/main/uni
 
 ## Useful Information
 
-- [Project Goals](https://codeberg.org/melvinquick/wttrman/projects/13315)
-- [Latest Releases](https://pypi.org/project/wttrman/)
+[Project Goals](https://codeberg.org/melvinquick/wttrman/projects/13315)  
+[Latest Releases](https://pypi.org/project/wttrman/)
