@@ -23,5 +23,4 @@ Uninstall: `curl -s https://codeberg.org/melvinquick/wttrman/raw/branch/main/uni
 ## Useful Information
 
 - [Project Goals](https://codeberg.org/melvinquick/wttrman/projects/13315)
-- [Latest Release](https://codeberg.org/melvinquick/wttrman/releases/latest)
-- [Releases](https://codeberg.org/melvinquick/wttrman/releases)
+- [Latest Releases](https://pypi.org/project/wttrman/)
