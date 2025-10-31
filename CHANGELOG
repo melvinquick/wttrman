@@ -17,3 +17,15 @@
 - [Remove unneeded functions and generalize the remaining one](https://codeberg.org/melvinquick/wttrman/issues/1)
 
 ### Documentation Changes
+
+## 1.2.3 (31 Oct 2025)
+
+### Major Changes
+
+### Minor Changes
+
+### Patch Changes
+
+- Bump version to bring required Python version down to 3.10
+
+### Documentation Changes

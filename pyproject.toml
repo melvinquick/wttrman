@@ -1,11 +1,11 @@
 [project]
 name = "wttrman"
-version = "1.2.2"
+version = "1.2.3"
 description = "GUI front-end to https://wttr.in/."
 readme = "src/wttrman/resources/PYPI_README.md"
 license = "MIT"
 authors = [{ name = "Melvin Quick", email = "melvinquick@proton.me" }]
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 dependencies = ["pyside6>=6.8.2.1", "pyyaml>=6.0.2", "requests>=2.32.3"]
 
 [project.urls]
