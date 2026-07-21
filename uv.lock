@@ -408,7 +408,7 @@ wheels = [
 
 [[package]]
 name = "wttrman"
-version = "1.2.4"
+version = "1.2.6"
 source = { editable = "." }
 dependencies = [
     { name = "pyside6" },
