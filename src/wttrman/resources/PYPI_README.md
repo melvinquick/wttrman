@@ -14,5 +14,5 @@ Uninstall: `curl -s https://github.com/melvinquick/wttrman/raw/branch/main/unins
 
 ## Useful Information
 
-[Project Goals](https://github.com/melvinquick/wttrman/projects/13315)  
+[Project](https://github.com/users/melvinquick/projects/10)  
 [Latest Releases](https://pypi.org/project/wttrman/)
