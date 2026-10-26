@@ -1,6 +1,6 @@
 [project]
 name = "wttrman"
-version = "1.2.26"
+version = "1.2.27"
 description = "GUI front-end to https://wttr.in/."
 readme = "src/wttrman/resources/PYPI_README.md"
 license = "MIT"
