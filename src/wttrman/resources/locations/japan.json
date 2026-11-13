@@ -1,0 +1,16 @@
+{
+  "Aichi": ["Nagoya", "Toyota", "Okazaki"],
+  "Chiba": ["Chiba", "Funabashi", "Kashiwa", "Matsudo"],
+  "Fukuoka": ["Fukuoka", "Kitakyushu", "Kurume"],
+  "Hokkaido": ["Asahikawa", "Hakodate", "Sapporo"],
+  "Hyogo": ["Himeji", "Kobe", "Nishinomiya"],
+  "Kanagawa": ["Fujisawa", "Kawasaki", "Sagamihara", "Yokohama"],
+  "Kyoto": ["Kyoto", "Uji"],
+  "Miyagi": ["Sendai"],
+  "Nara": ["Nara"],
+  "Okinawa": ["Naha", "Okinawa City"],
+  "Osaka": ["Higashiosaka", "Osaka", "Sakai"],
+  "Saitama": ["Kawagoe", "Kawaguchi", "Saitama", "Tokorozawa"],
+  "Shizuoka": ["Hamamatsu", "Shizuoka"],
+  "Tokyo": ["Hachioji", "Machida", "Tokyo"]
+}

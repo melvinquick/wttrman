@@ -1,0 +1,122 @@
+{
+  "Baden-Württemberg": [
+    "Freiburg im Breisgau",
+    "Heidelberg",
+    "Heilbronn",
+    "Karlsruhe",
+    "Mannheim",
+    "Pforzheim",
+    "Reutlingen",
+    "Stuttgart",
+    "Tübingen",
+    "Ulm"
+  ],
+  "Bavaria": [
+    "Ansbach",
+    "Aschaffenburg",
+    "Augsburg",
+    "Bamberg",
+    "Bayreuth",
+    "Erlangen",
+    "Fürth",
+    "Ingolstadt",
+    "Landshut",
+    "Munich",
+    "Nuremberg",
+    "Passau",
+    "Regensburg",
+    "Würzburg"
+  ],
+  "Berlin": ["Berlin"],
+  "Brandenburg": [
+    "Brandenburg an der Havel",
+    "Cottbus",
+    "Frankfurt (Oder)",
+    "Potsdam"
+  ],
+  "Bremen": ["Bremen", "Bremerhaven"],
+  "Hamburg": ["Hamburg"],
+  "Hesse": [
+    "Darmstadt",
+    "Frankfurt am Main",
+    "Fulda",
+    "Gießen",
+    "Kassel",
+    "Marburg",
+    "Offenbach am Main",
+    "Wiesbaden"
+  ],
+  "Lower Saxony": [
+    "Braunschweig",
+    "Göttingen",
+    "Hannover",
+    "Hildesheim",
+    "Oldenburg",
+    "Osnabrück",
+    "Salzgitter",
+    "Wolfsburg"
+  ],
+  "Mecklenburg-Vorpommern": [
+    "Greifswald",
+    "Neubrandenburg",
+    "Rostock",
+    "Schwerin",
+    "Stralsund",
+    "Wismar"
+  ],
+  "North Rhine-Westphalia": [
+    "Aachen",
+    "Bielefeld",
+    "Bochum",
+    "Bonn",
+    "Bottrop",
+    "Cologne",
+    "Dortmund",
+    "Duisburg",
+    "Düsseldorf",
+    "Essen",
+    "Gelsenkirchen",
+    "Hagen",
+    "Hamm",
+    "Herne",
+    "Krefeld",
+    "Leverkusen",
+    "Mönchengladbach",
+    "Mülheim an der Ruhr",
+    "Münster",
+    "Oberhausen",
+    "Paderborn",
+    "Recklinghausen",
+    "Remscheid",
+    "Siegen",
+    "Solingen",
+    "Wuppertal"
+  ],
+  "Rhineland-Palatinate": [
+    "Kaiserslautern",
+    "Koblenz",
+    "Ludwigshafen",
+    "Mainz",
+    "Neuwied",
+    "Trier",
+    "Worms"
+  ],
+  "Saarland": ["Homburg", "Neunkirchen", "Saarbrücken"],
+  "Saxony": [
+    "Chemnitz",
+    "Dresden",
+    "Freiberg",
+    "Görlitz",
+    "Leipzig",
+    "Plauen",
+    "Zwickau"
+  ],
+  "Saxony-Anhalt": [
+    "Dessau-Roßlau",
+    "Halle (Saale)",
+    "Magdeburg",
+    "Wittenberg"
+  ],
+  "Schleswig-Holstein": ["Flensburg", "Kiel", "Lübeck", "Neumünster"],
+  "Thuringia": ["Erfurt", "Gera", "Jena", "Nordhausen", "Suhl", "Weimar"]
+}

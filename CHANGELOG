@@ -2,67 +2,73 @@
 
 ## 1.0.0 (12 Feb 2025)
 
+### New Features
+
 - Initial release
 
 ## 1.2.2 (14 Mar 2025)
 
-### Major Changes
+### Improvements
 
-### Minor Changes
+- Updated file structure to UV instead of BeeWare
 
-- [Update file structure to UV instead of BeeWare](https://codeberg.org/melvinquick/wttrman/issues/2)
+### Bug Fixes
 
-### Patch Changes
-
-- [Remove unneeded functions and generalize the remaining one](https://codeberg.org/melvinquick/wttrman/issues/1)
-
-### Documentation Changes
+- Removed unneeded functions and generalized the remaining one
 
 ## 1.2.3 (31 Oct 2025)
 
-### Major Changes
+### Improvements
 
-### Minor Changes
-
-### Patch Changes
-
-- Bump version to bring required Python version down to 3.10
-
-### Documentation Changes
+- Bumped version to bring required Python version down to 3.10
 
 ## 1.2.4 (23 Jun 2026)
 
-### Major Changes
-
-### Minor Changes
-
-### Patch Changes
+### Improvements
 
 - Version bump for dependency updates
-
-### Documentation Changes
 
 ## 1.2.6 (21 Jul 2026)
 
-### Major Changes
-
-### Minor Changes
-
-### Patch Changes
+### Improvements
 
 - Version bump for dependency updates
 
-### Documentation Changes
-
 ## 1.2.27 (26 Oct 2026)
 
-### Major Changes
-
-### Minor Changes
-
-### Patch Changes
+### Improvements
 
 - Version bump for dependency updates
 - Version bump for Python version bump to 3.15
 
-### Documentation Changes
+## 2.0.0 (13 Nov 2026)
+
+### New Features
+
+- Added support for international locations (Canada, Australia, New Zealand, Japan, Germany, France, Ireland, United Kingdom, and United States)
+- Added a full Preferences dialog to manage application settings
+- Added customizable weather output metrics (Condition, Temperature, Feels Like, Wind, Humidity, Precipitation, Pressure, and UV Index)
+- Added a toggleable Emoji icon system to replace the default plain-text weather conditions
+- Added the ability to choose between Metric and USCS units
+- Added configurable "Startup Defaults" for country, region, and city
+- Added a dynamic grid-based weather output layout that wraps and scales based on window size
+- Added an About dialog (Help → About Wttrman) showing version, author, and license
+
+### Improvements
+
+- Completely overhauled the UI to a modern, card-based layout with dynamic font scaling
+- Refactored the codebase into modular components (`LocationPanel`, `WeatherPanel`, `PreferencesDialog`, `AboutDialog`, `LocationRepository`, `ThemeManager`)
+- Replaced the monolithic `locations.yaml` with scalable, per-country JSON location files
+- Replaced the legacy inline styling with a fully dynamic QSS theme system
+- Added 12 built-in themes (Wttrman Dark/Light, Phaino Dark/Light, Catppuccin, Gruvbox, Solarized, Equinox)
+- Implemented live theme switching in the Preferences dialog
+- Improved the custom dropdown behavior to prevent full-screen lists and properly display scrollbars
+- Added "session restore" logic to remember the last opened location on startup
+
+### Bug Fixes
+
+- Fixed the application crashing when querying invalid UV Index data from wttr.in
+- Fixed an issue where the "Feels Like" checkbox did not visually gray out when disabled
+- Fixed an issue where the "Feels Like" state was not remembered after toggling Temperature off and on
+- Fixed text wrapping in the weather output so that emojis stay bound to their respective values (e.g., preventing "km/h" from breaking across lines)
+- Fixed dropdown menus appearing blocky, misaligned, or having invisible scrollbars

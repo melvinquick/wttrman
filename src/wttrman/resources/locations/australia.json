@@ -1,0 +1,71 @@
+{
+  "Australian Capital Territory": ["Canberra"],
+  "New South Wales": [
+    "Albury",
+    "Armidale",
+    "Bathurst",
+    "Coffs Harbour",
+    "Dubbo",
+    "Gosford",
+    "Goulburn",
+    "Lismore",
+    "Newcastle",
+    "Orange",
+    "Port Macquarie",
+    "Sydney",
+    "Tamworth",
+    "Wagga Wagga",
+    "Wollongong"
+  ],
+  "Northern Territory": [
+    "Alice Springs",
+    "Darwin",
+    "Katherine",
+    "Palmerston",
+    "Tennant Creek"
+  ],
+  "Queensland": [
+    "Bundaberg",
+    "Cairns",
+    "Gladstone",
+    "Gold Coast",
+    "Hervey Bay",
+    "Mackay",
+    "Mount Isa",
+    "Rockhampton",
+    "Sunshine Coast",
+    "Toowoomba",
+    "Townsville"
+  ],
+  "South Australia": [
+    "Adelaide",
+    "Mount Gambier",
+    "Murray Bridge",
+    "Port Augusta",
+    "Port Lincoln",
+    "Port Pirie",
+    "Whyalla"
+  ],
+  "Tasmania": ["Burnie", "Devonport", "Hobart", "Launceston"],
+  "Victoria": [
+    "Ballarat",
+    "Bendigo",
+    "Geelong",
+    "Melbourne",
+    "Mildura",
+    "Shepparton",
+    "Traralgon",
+    "Warrnambool",
+    "Wodonga"
+  ],
+  "Western Australia": [
+    "Albany",
+    "Broome",
+    "Bunbury",
+    "Geraldton",
+    "Kalgoorlie",
+    "Karratha",
+    "Perth",
+    "Port Hedland"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "Connacht": ["Galway", "Sligo", "Castlebar", "Ballina"],
+  "Leinster": [
+    "Dublin",
+    "Kilkenny",
+    "Drogheda",
+    "Dundalk",
+    "Wexford",
+    "Carlow",
+    "Naas",
+    "Athlone"
+  ],
+  "Munster": ["Cork", "Limerick", "Waterford", "Clonmel", "Tralee", "Ennis"],
+  "Ulster": ["Letterkenny", "Cavan", "Monaghan", "Donegal"]
+}

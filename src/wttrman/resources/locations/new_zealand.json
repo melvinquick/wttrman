@@ -1,0 +1,27 @@
+{
+  "Auckland": [
+    "Auckland",
+    "Devonport",
+    "Manukau",
+    "Papakura",
+    "Pukekohe",
+    "Waiheke Island"
+  ],
+  "Bay of Plenty": ["Rotorua", "Tauranga", "Whakatāne"],
+  "Canterbury": ["Ashburton", "Christchurch", "Timaru"],
+  "Hawke's Bay": ["Hastings", "Napier"],
+  "Manawatū-Whanganui": ["Levin", "Palmerston North", "Whanganui"],
+  "Nelson-Tasman": ["Nelson", "Richmond"],
+  "Northland": ["Dargaville", "Kerikeri", "Whangārei"],
+  "Otago": ["Dunedin", "Oamaru", "Queenstown", "Wānaka"],
+  "Southland": ["Invercargill"],
+  "Taranaki": ["New Plymouth"],
+  "Waikato": ["Hamilton", "Taupō", "Thames"],
+  "Wellington": [
+    "Lower Hutt",
+    "Masterton",
+    "Porirua",
+    "Upper Hutt",
+    "Wellington"
+  ]
+}

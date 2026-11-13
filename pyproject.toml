@@ -1,6 +1,6 @@
 [project]
 name = "wttrman"
-version = "1.2.27"
+version = "2.0.0"
 description = "GUI front-end to https://wttr.in/."
 readme = "README.md"
 license = "MIT"

@@ -1,0 +1,77 @@
+{
+  "Auvergne-Rhône-Alpes": [
+    "Annecy",
+    "Chambéry",
+    "Clermont-Ferrand",
+    "Grenoble",
+    "Lyon",
+    "Saint-Étienne",
+    "Valence"
+  ],
+  "Bourgogne-Franche-Comté": ["Belfort", "Besançon", "Dijon"],
+  "Brittany": ["Brest", "Lorient", "Quimper", "Rennes", "Saint-Malo", "Vannes"],
+  "Centre-Val de Loire": ["Blois", "Bourges", "Chartres", "Orléans", "Tours"],
+  "Corsica": ["Ajaccio", "Bastia"],
+  "Grand Est": [
+    "Châlons-en-Champagne",
+    "Metz",
+    "Mulhouse",
+    "Nancy",
+    "Reims",
+    "Strasbourg",
+    "Troyes"
+  ],
+  "Hauts-de-France": [
+    "Amiens",
+    "Arras",
+    "Calais",
+    "Dunkerque",
+    "Lille",
+    "Roubaix",
+    "Tourcoing",
+    "Valenciennes"
+  ],
+  "Île-de-France": [
+    "Argenteuil",
+    "Boulogne-Billancourt",
+    "Créteil",
+    "Montreuil",
+    "Nanterre",
+    "Paris",
+    "Saint-Denis",
+    "Versailles",
+    "Vitry-sur-Seine"
+  ],
+  "Normandy": ["Caen", "Cherbourg-en-Cotentin", "Évreux", "Le Havre", "Rouen"],
+  "Nouvelle-Aquitaine": [
+    "Angoulême",
+    "Bayonne",
+    "Bordeaux",
+    "La Rochelle",
+    "Limoges",
+    "Niort",
+    "Pau",
+    "Poitiers"
+  ],
+  "Occitanie": [
+    "Albi",
+    "Béziers",
+    "Carcassonne",
+    "Montpellier",
+    "Nîmes",
+    "Narbonne",
+    "Perpignan",
+    "Tarbes",
+    "Toulouse"
+  ],
+  "Pays de la Loire": ["Angers", "Le Mans", "Nantes", "Saint-Nazaire"],
+  "Provence-Alpes-Côte d'Azur": [
+    "Aix-en-Provence",
+    "Antibes",
+    "Avignon",
+    "Cannes",
+    "Marseille",
+    "Nice",
+    "Toulon"
+  ]
+}
