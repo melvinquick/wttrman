@@ -2,7 +2,7 @@
 name = "wttrman"
 version = "1.2.27"
 description = "GUI front-end to https://wttr.in/."
-readme = "src/wttrman/resources/PYPI_README.md"
+readme = "README.md"
 license = "MIT"
 authors = [{ name = "Melvin Quick", email = "melvinquick@proton.me" }]
 requires-python = ">=3.11"
