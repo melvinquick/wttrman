@@ -1,31 +1,27 @@
-"""
-GUI front-end to https://wttr.in/.
-"""
-
 import sys
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QApplication,
-    QMainWindow,
-    QWidget,
-    QPushButton,
     QComboBox,
     QGridLayout,
     QLabel,
+    QMainWindow,
+    QPushButton,
+    QWidget,
 )
 
-from wttrman.wttr import Wttr
-from wttrman.yaml_file_handler import YamlFileHandler
+from .components.wttr import Wttr
+from .components.yaml_file_handler import YamlFileHandler
 
-config_file = YamlFileHandler("resources/configs/config.yaml")
+config_file = YamlFileHandler("../resources/configs/config.yaml")
 config = config_file.load_yaml_file()
 
-themes_file = YamlFileHandler("resources/configs/themes.yaml")
+themes_file = YamlFileHandler("../resources/styles/themes.yaml")
 themes = themes_file.load_yaml_file()
 
-locations_file = YamlFileHandler("resources/configs/locations.yaml")
+locations_file = YamlFileHandler("../resources/configs/locations.yaml")
 locations = locations_file.load_yaml_file()
 
 
