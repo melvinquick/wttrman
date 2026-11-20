@@ -36,7 +36,7 @@ I built Wttrman because I wanted a fast, native desktop app that gave me exactly
 The installer sets up a dedicated venv and creates a desktop shortcut.
 
 ```
-curl -s https://raw.githubusercontent.com/melvinquick/wttrman/main/install.py | python3 -
+curl -s https://raw.githubusercontent.com/melvinquick/wttrman/main/install.py | python3 - wttrman
 ```
 
 ### Supported Operating Systems
