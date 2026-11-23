@@ -1,39 +1,53 @@
-DEFAULT_THEME = "wttrman_dark"
-
-
 class ThemeManager:
-    """Applies a QSS template with theme tokens and re-polishes registered widgets."""
-
-    DEFAULT_THEME = DEFAULT_THEME
+    # Set to "sugar_goth" for PNF, Psswd Box, Scramble, Wttrman
+    # Set to "phaino_dusk" for Phaino
+    DEFAULT_THEME = "sugar_goth"
 
     def __init__(self, themes, qss_template):
-        # Pop 'general' instead of 'geometry'
         self.general = themes.pop("general", {})
         self.themes = themes
         self.qss_template = qss_template
-        self._registered = []
 
-    def register(self, widget):
-        if widget not in self._registered:
-            self._registered.append(widget)
+    def get_display_name(self, theme_key):
+        return (
+            theme_key.replace("phaino_dusk", "Phaino Dusk")
+            .replace("phaino_dawn", "Phaino Dawn")
+            .replace("_", " ")
+            .title()
+        )
 
-    def apply(self, widget, theme_name):
-        if theme_name not in self.themes:
-            theme_name = self.DEFAULT_THEME
-        widget.setStyleSheet(self._render(theme_name))
-        for w in self._registered:
-            self._repolish(w)
-        return theme_name
+    def get_available_themes(self):
+        valid_themes = list(self.themes.keys())
 
-    def _render(self, theme_name):
-        # Merge the general tokens with the specific theme tokens
-        tokens = {**self.general, **self.themes[theme_name]}
+        def sort_key(key):
+            display = self.get_display_name(key)
+            base_name = (
+                display.replace(" Dark", "")
+                .replace(" Light", "")
+                .replace(" Dusk", "")
+                .replace(" Dawn", "")
+            )
+            if " Dark" in display or " Dusk" in display:
+                weight = 0
+            else:
+                weight = 1
+            return (base_name, weight)
+
+        return sorted(valid_themes, key=sort_key)
+
+    def resolve(self, theme_name):
+        if theme_name in self.themes:
+            return theme_name
+        return self.DEFAULT_THEME
+
+    def render(self, theme_name):
+        name = self.resolve(theme_name)
+        tokens = {**self.general, **self.themes[name]}
+
         qss = self.qss_template
         for key, value in tokens.items():
-            qss = qss.replace(f"@{key}", value)
-        return qss
+            qss = qss.replace(f"{{{{{key}}}}}", str(value))
 
-    def _repolish(self, widget):
-        widget.style().unpolish(widget)
-        widget.style().polish(widget)
-        widget.update()
+        import re
+
+        return re.sub(r"\{\{[^}]+\}\}", "", qss)

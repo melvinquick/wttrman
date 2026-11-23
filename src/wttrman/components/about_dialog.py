@@ -21,7 +21,7 @@ class AboutDialog(QDialog):
         self.setFixedWidth(400)
 
         # Apply the app's current theme to this dialog
-        self.setStyleSheet(theme_manager._render(current_theme))
+        self.setStyleSheet(theme_manager.render(current_theme))
 
         # Fetch the accent color for the links
         theme_color = theme_manager.themes[current_theme].get("accent-color", "#58a6ff")

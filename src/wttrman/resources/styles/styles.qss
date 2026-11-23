@@ -1,196 +1,126 @@
-/* ===================================================================
-   Wttrman — global stylesheet template.
-   @tokens are replaced by ThemeManager._render() at apply() time.
-   =================================================================== */
+/* =========================================
+   UNIVERSAL BASE (DO NOT EDIT PER APP)
+   ========================================= */
 
-/* ---- Global ---- */
 QWidget {
-    background-color: @background-color;
-    color: @color;
-    font-family: "@font-family";
-    font-size: @font-size-base;
+    background-color: {{background-color}};
+    color: {{color}};
+    font-family: "{{font-family}}";
+    font-size: {{font-size-base}};
 }
 
-QMainWindow,
-QWidget#CentralWidget {
-    background-color: @background-color;
+QMainWindow, QDialog {
+    background-color: {{background-color}};
 }
 
-QDialog {
-    background-color: @background-color;
-    color: @color;
+QToolTip {
+    background-color: {{surface-color}};
+    color: {{color}};
+    border: {{border}};
+    border-radius: {{border-radius}};
+    padding: {{padding-v}} {{padding-h}};
 }
 
-QWidget#TopBarContainer {
-    background-color: @surface-color;
-    border-bottom: @border;
-}
-
-/* ---- Menu bar ---- */
-QMenuBar {
+QLabel {
     background: transparent;
-    color: @color;
-    padding: 0;
+    color: {{color}};
+}
+
+QMenuBar {
+    background-color: {{surface-color}};
+    color: {{color}};
+    border-bottom: {{border}};
 }
 
 QMenuBar::item {
     background: transparent;
     padding: 6px 12px;
-    border-radius: @border-radius;
+    border-radius: {{border-radius}};
 }
 
 QMenuBar::item:selected {
-    background-color: @widget-background-color;
+    background-color: {{widget-background-color}};
 }
 
 QMenu {
-    background-color: @widget-background-color;
-    color: @color;
-    border: @border;
-    border-radius: @border-radius;
+    background-color: {{surface-color}};
+    color: {{color}};
+    border: {{border}};
+    border-radius: {{border-radius}};
     padding: 4px;
 }
 
 QMenu::item {
-    padding: 6px 20px;
-    border-radius: @border-radius;
+    padding: 6px 24px;
+    border-radius: {{border-radius}};
 }
 
 QMenu::item:selected {
-    background-color: @accent-color;
-    color: @accent-text-color;
+    background-color: {{accent-color}};
+    color: {{accent-text-color}};
 }
 
-/* ---- Cards / Panels ---- */
-QFrame#Card {
-    background-color: @surface-color;
-    border: @border;
-    border-radius: @border-radius;
-}
-
-/* ---- Labels ---- */
-QLabel {
-    background: transparent;
-    color: @color;
-    min-height: 0px;
-}
-
-QLabel#sectionLabel {
-    color: @color; 
-    font-weight: bold;
-    font-size: 10pt;
-    padding-bottom: 4px;
-    padding-left: 2px;
+QFrame#Card, QFrame#Section {
+    background-color: {{surface-color}};
+    border: {{border}};
+    border-radius: {{border-radius}};
 }
 
 QLabel#DialogTitle {
-    font-size: 16pt;
-    font-weight: 600;
-    color: @color;
+    font-size: {{font-size-lg}};
+    font-weight: 700;
+    color: {{color}};
 }
 
 QLabel#MutedLabel {
-    color: @muted-color;
-    font-size: 9pt;
+    color: {{muted-color}};
+    font-size: {{font-size-base}};
 }
 
-/* ---- Weather card ---- */
-QLabel#weatherOutput {
-    background: transparent;
-    color: @color;
-    padding: 16px;
-}
-
-QLabel#weatherOutput[sizeClass="small"] {
-    font-size: 12pt;
-}
-
-QLabel#weatherOutput[sizeClass="medium"] {
-    font-size: 18pt;
-}
-
-QLabel#weatherOutput[sizeClass="large"] {
-    font-size: 26pt;
-}
-
-/* ---- Buttons ---- */
 QPushButton {
-    background-color: @widget-background-color;
-    color: @color;
-    border: @border;
-    border-radius: @border-radius;
-    padding: @padding-v @padding-h;
-    min-height: 28px;
+    background-color: {{widget-background-color}};
+    color: {{color}};
+    border: {{border}};
+    border-radius: {{border-radius}};
+    padding: {{padding-v}} {{padding-h}};
+    min-height: 24px;
 }
 
 QPushButton:hover {
-    border-color: @accent-color;
+    border-color: {{accent-color}};
 }
 
 QPushButton:pressed {
-    background-color: @accent-color;
-    color: @accent-text-color;
-}
-
-QPushButton:disabled {
-    color: @muted-color;
-    background-color: @surface-color;
+    background-color: {{accent-color}};
+    color: {{accent-text-color}};
 }
 
 QPushButton#PrimaryButton {
-    background-color: @accent-color;
-    color: @accent-text-color;
-    border: 1px solid @accent-color;
-    border-radius: @border-radius;
-    font-weight: 600;
-    padding: 12px;
+    background-color: {{accent-color}};
+    color: {{accent-text-color}};
+    border: 1px solid {{accent-color}};
+    font-weight: 700;
+    padding: 12px 16px;
+    font-size: {{font-size-lg}};
 }
 
 QPushButton#PrimaryButton:hover {
-    background-color: @accent-hover-color;
-    border-color: @accent-hover-color;
+    background-color: {{accent-hover-color}};
+    border-color: {{accent-hover-color}};
 }
 
-QPushButton#PrimaryButton:pressed {
-    background-color: @accent-color;
-    border-color: @accent-color;
+QLineEdit, QComboBox {
+    background-color: {{widget-background-color}};
+    color: {{color}};
+    border: {{border}};
+    border-radius: {{border-radius}};
+    padding: {{padding-v}} {{padding-h}};
+    selection-background-color: {{accent-color}};
+    selection-color: {{accent-text-color}};
 }
 
-QPushButton#StatusLabel {
-    background: transparent;
-    border: none;
-    color: @muted-color;
-    text-align: center;
-    padding: 4px;
-    min-height: 20px;
-}
-
-QPushButton#StatusLabel[kind="success"] { color: @success-color; }
-QPushButton#StatusLabel[kind="danger"]  { color: @danger-color; }
-QPushButton#StatusLabel[kind="warning"] { color: @warning-color; }
-
-/* ---- Combo box ---- */
-QComboBox {
-    background-color: @widget-background-color;
-    color: @color;
-    border: @border;
-    border-radius: @border-radius;
-    padding: @padding-v @padding-h;
-    min-height: 24px;
-    combobox-popup: 0;
-}
-
-QComboBox:hover {
-    border-color: @accent-color;
-}
-
-QComboBox:focus {
-    border-color: @accent-color;
-}
-
-QComboBox:disabled {
-    color: @muted-color;
-    background-color: @surface-color;
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid {{accent-color}};
 }
 
 QComboBox::drop-down {
@@ -198,97 +128,95 @@ QComboBox::drop-down {
     width: 30px;
 }
 
-/* ---- Combo box Dropdown (Popup) ---- */
 QComboBox QAbstractItemView {
-    background-color: @widget-background-color;
-    color: @color;
-    border: @border;
-    border-radius: @border-radius;
-    outline: 0px; 
-    margin: 0px;
-    padding: 4px;
-    selection-background-color: @accent-color;
-    selection-color: @accent-text-color;
+    background-color: {{surface-color}};
+    color: {{color}};
+    border: {{border}};
+    border-radius: {{border-radius}};
+    selection-background-color: {{accent-color}};
+    selection-color: {{accent-text-color}};
+    outline: none;
 }
 
-QComboBox QAbstractItemView::item {
-    height: 28px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border: none;
-    border-radius: @border-radius;
-}
-
-QComboBox QAbstractItemView::item:selected {
-    background-color: @accent-color;
-    color: @accent-text-color;
-}
-
-/* Scrollbar inside the ComboBox Dropdown */
-QComboBox QAbstractItemView QScrollBar:vertical {
-    background: @widget-background-color;
-    width: 12px;
-    margin: 0px;
-    border: none;
-}
-
-QComboBox QAbstractItemView QScrollBar::handle:vertical {
-    background: @surface-color;
-    min-height: 20px;
-    border-radius: 6px;
-    margin: 2px;
-}
-
-QComboBox QAbstractItemView QScrollBar::handle:vertical:hover {
-    background: @muted-color;
-}
-
-QComboBox QAbstractItemView QScrollBar::add-line:vertical,
-QComboBox QAbstractItemView QScrollBar::sub-line:vertical {
-    background: none;
-    border: none;
-    height: 0px;
-}
-
-QComboBox QAbstractItemView QScrollBar::add-page:vertical,
-QComboBox QAbstractItemView QScrollBar::sub-page:vertical {
-    background: none;
-}
-
-/* ---- Tooltip ---- */
-QToolTip {
-    background-color: @widget-background-color;
-    color: @color;
-    border: @border;
-    border-radius: @border-radius;
-    padding: 4px;
-}
-
-/* ---- Checkboxes ---- */
-QCheckBox:disabled {
-    color: @muted-color;
+QCheckBox {
+    color: {{color}};
+    spacing: 8px;
+    background: transparent;
+    padding: 4px 0px;
 }
 
 QCheckBox::indicator {
     width: 16px;
     height: 16px;
-    border: 1px solid @border;
+    border: {{border}};
     border-radius: 3px;
-    background-color: @widget-background-color;
+    background-color: {{widget-background-color}};
 }
 
 QCheckBox::indicator:checked {
-    background-color: @accent-color;
-    border-color: @accent-color;
-    image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5bGluZSBwb2ludHM9IjIwIDYgOSAxNyA0IDEyIj48L3BvbHlsaW5lPjwvc3ZnPg==);
+    background-color: {{accent-color}};
+    border-color: {{accent-color}};
 }
 
-QCheckBox::indicator:disabled {
-    background-color: @background-color;
-    border-color: @border;
+/* =========================================
+   WTTRMAN SPECIFIC EXTENSIONS
+   ========================================= */
+
+QWidget#TopBarContainer {
+    background-color: {{surface-color}};
+    border-bottom: {{border}};
 }
 
-QCheckBox::indicator:checked:disabled {
-    background-color: @surface-color;
-    border-color: @border;
+QLabel#weatherOutput {
+    background: transparent;
+    color: {{color}};
+    padding: 16px;
+}
+
+QLabel#weatherOutput[sizeClass="small"] { font-size: 12pt; }
+QLabel#weatherOutput[sizeClass="medium"] { font-size: 18pt; }
+QLabel#weatherOutput[sizeClass="large"] { font-size: 26pt; }
+
+QPushButton#StatusLabel {
+    background: transparent;
+    border: none;
+    color: {{muted-color}};
+    padding: 4px;
+    min-height: 20px;
+}
+
+QPushButton#StatusLabel[kind="success"] { color: {{success-color}}; }
+QPushButton#StatusLabel[kind="danger"]  { color: {{danger-color}}; }
+QPushButton#StatusLabel[kind="warning"] { color: {{warning-color}}; }
+
+/* =========================================
+   WTTRMAN MENU BAR FIXES
+   ========================================= */
+
+QWidget#TopBarContainer QMenuBar {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+QWidget#TopBarContainer QMenuBar::item {
+    background: transparent;
+    padding: 6px 12px;
+    margin: 0px;
+    min-height: 0px;
+    text-decoration: none; /* This removes the underline */
+    border: none;
+}
+
+QWidget#TopBarContainer QMenuBar::item:selected {
+    background-color: {{widget-background-color}};
+    border-radius: {{border-radius}};
+    text-decoration: none;
+}
+
+QWidget#TopBarContainer QMenuBar::item:pressed {
+    background-color: {{accent-color}};
+    color: {{accent-text-color}};
+    text-decoration: none;
 }

@@ -1,6 +1,7 @@
+import os
 import sys
-import requests
 
+import requests
 from PySide6.QtCore import QSettings, Qt, QTimer
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import (
@@ -22,7 +23,7 @@ from .components.preferences_dialog import PreferencesDialog
 from .components.qss_file_handler import QssFileHandler
 from .components.theme_manager import ThemeManager
 from .components.weather_panel import WeatherPanel
-from .components.weather_service import WeatherError, WeatherService
+from .components.weather_service import WeatherService
 from .components.yaml_file_handler import YamlFileHandler
 
 
@@ -38,7 +39,11 @@ class Wttrman(QMainWindow):
         qss = QssFileHandler("../resources/styles/styles.qss").load_qss_file()
         self.theme_manager = ThemeManager(self.themes, qss)
 
-        self.settings = QSettings("wttrman", "settings")
+        config_dir = os.path.expanduser("~/.config/wttrman")
+        os.makedirs(config_dir, exist_ok=True)
+        settings_path = os.path.join(config_dir, "settings.conf")
+        self.settings = QSettings(settings_path, QSettings.Format.IniFormat)
+
         self.theme_name = self.settings.value("theme", ThemeManager.DEFAULT_THEME)
 
         self._status_timer = QTimer(self)
@@ -144,9 +149,6 @@ class Wttrman(QMainWindow):
         self.get_weather.clicked.connect(self.fetch_weather)
         self.location_panel.selection_changed.connect(self._on_location_changed)
 
-        self.theme_manager.register(self.status_label)
-        self.theme_manager.register(self.menu_bar)
-
         self.apply_theme(self.theme_name)
 
         self.setMinimumWidth(720)
@@ -248,11 +250,10 @@ class Wttrman(QMainWindow):
         dialog.exec()
 
     def apply_theme(self, theme_name):
-        self.theme_name = self.theme_manager.apply(self, theme_name)
-        QApplication.instance().setStyleSheet(
-            self.theme_manager._render(self.theme_name)
-        )
-        self.theme_manager._repolish(self.status_label)
+        self.theme_name = self.theme_manager.resolve(theme_name)
+        self.settings.setValue("theme", self.theme_name)
+        qss = self.theme_manager.render(self.theme_name)
+        QApplication.instance().setStyleSheet(qss)
 
     def _on_location_changed(self, *_):
         self.weather_panel.set_text("Press Get Weather to fetch the forecast.")
@@ -409,13 +410,11 @@ class Wttrman(QMainWindow):
         self.status_label.setText(message)
         if self.status_label.property("kind") != kind:
             self.status_label.setProperty("kind", kind)
-            self.theme_manager._repolish(self.status_label)
         self._status_timer.start(2500)
 
     def clear_status(self):
         self.status_label.setText("")
         self.status_label.setProperty("kind", "info")
-        self.theme_manager._repolish(self.status_label)
 
 
 def main():

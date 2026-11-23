@@ -60,7 +60,6 @@
 - Refactored the codebase into modular components (`LocationPanel`, `WeatherPanel`, `PreferencesDialog`, `AboutDialog`, `LocationRepository`, `ThemeManager`)
 - Replaced the monolithic `locations.yaml` with scalable, per-country JSON location files
 - Replaced the legacy inline styling with a fully dynamic QSS theme system
-- Added 12 built-in themes (Wttrman Dark/Light, Phaino Dark/Light, Catppuccin, Gruvbox, Solarized, Equinox)
 - Implemented live theme switching in the Preferences dialog
 - Improved the custom dropdown behavior to prevent full-screen lists and properly display scrollbars
 - Added "session restore" logic to remember the last opened location on startup
@@ -72,3 +71,23 @@
 - Fixed an issue where the "Feels Like" state was not remembered after toggling Temperature off and on
 - Fixed text wrapping in the weather output so that emojis stay bound to their respective values (e.g., preventing "km/h" from breaking across lines)
 - Fixed dropdown menus appearing blocky, misaligned, or having invisible scrollbars
+
+## 2.1.0 (23 Nov 2026)
+
+### New Features
+
+- Added the "Sugar Pop" (light) and "Sugar Goth" (dark) themes to the theme selection.
+
+### Improvements
+
+- **Ecosystem Unification:** Standardized the `ThemeManager`, `themes.yaml`, and `styles.qss` across all Melvin Quick applications for a consistent cross-app experience.
+- Removed all one-off app-specific themes in favor of shared ecosystem themes.
+- Renamed the legacy "Phaino Dark/Light" themes to "Phaino Dusk" and "Phaino Dawn".
+- Simplified the theme sorting logic in the Preferences dialog to automatically group Dark/Dusk themes before Light/Dawn themes, and alphabetize the list.
+- Updated the default theme to "Sugar Goth".
+- Standardized the settings save path to `~/.config/wttrman/settings.conf`.
+
+### Bug Fixes
+
+- Fixed an issue where the Preferences dialog would not update its own styling when a new theme was selected.
+- Fixed the menu bar items displaying unwanted underlines in certain themes.

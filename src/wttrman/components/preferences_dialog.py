@@ -5,15 +5,15 @@ from PySide6.QtWidgets import (
     QComboBox,
     QDialog,
     QFrame,
+    QGridLayout,
     QHBoxLayout,
     QLabel,
     QPushButton,
     QVBoxLayout,
-    QGridLayout,
 )
 
-from .theme_manager import ThemeManager
 from .location_repository import LocationRepository
+from .theme_manager import ThemeManager
 
 
 class PreferencesDialog(QDialog):
@@ -36,7 +36,7 @@ class PreferencesDialog(QDialog):
         self.setWindowTitle("Preferences")
         self.setFixedWidth(450)
 
-        self.setStyleSheet(self.theme_manager._render(self.current_theme))
+        self.setStyleSheet(self.theme_manager.render(self.current_theme))
 
         self._build_ui()
         self._load_settings()
@@ -54,8 +54,7 @@ class PreferencesDialog(QDialog):
         card_layout.setSpacing(12)
 
         title = QLabel("Appearance")
-        title.setObjectName("DialogTitle")
-        title.setStyleSheet("font-size: 10pt; font-weight: 600;")
+        title.setObjectName("SectionTitle")
         card_layout.addWidget(title)
 
         theme_row = QHBoxLayout()
@@ -63,9 +62,10 @@ class PreferencesDialog(QDialog):
         theme_label.setFixedWidth(60)
 
         self.theme_combo = QComboBox()
-        for name in sorted(self.theme_manager.themes.keys()):
-            label = name.replace("_", " ").title()
-            self.theme_combo.addItem(label, userData=name)
+
+        for name in self.theme_manager.get_available_themes():
+            display_name = self.theme_manager.get_display_name(name)
+            self.theme_combo.addItem(display_name, userData=name)
 
         idx = self.theme_combo.findData(self.current_theme)
         if idx >= 0:
@@ -86,8 +86,7 @@ class PreferencesDialog(QDialog):
         weather_layout.setSpacing(12)
 
         title2 = QLabel("Weather Output")
-        title2.setObjectName("DialogTitle")
-        title2.setStyleSheet("font-size: 10pt; font-weight: 600;")
+        title2.setObjectName("SectionTitle")
         weather_layout.addWidget(title2)
 
         # Units
@@ -145,8 +144,7 @@ class PreferencesDialog(QDialog):
         defaults_layout.setSpacing(12)
 
         title3 = QLabel("Startup Defaults")
-        title3.setObjectName("DialogTitle")
-        title3.setStyleSheet("font-size: 10pt; font-weight: 600;")
+        title3.setObjectName("SectionTitle")
         defaults_layout.addWidget(title3)
 
         self.def_country = QComboBox()
@@ -293,8 +291,11 @@ class PreferencesDialog(QDialog):
             self.current_theme = new_theme
             self.settings.setValue("theme", new_theme)
 
-            qss = self.theme_manager._render(self.current_theme)
+            qss = self.theme_manager.render(self.current_theme)
+
             QApplication.instance().setStyleSheet(qss)
+
+            self.setStyleSheet(qss)
 
             self.theme_changed.emit(new_theme)
 
